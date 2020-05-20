@@ -6,4 +6,4 @@ class Job(models.Model):
 	video = models.FileField(upload_to = 'images/')
 	summary = models.CharField(max_length = 200)
 	pub_date = models.DateTimeField()
-	body = models.TextField()
+	body = models.URLField(max_length=255)

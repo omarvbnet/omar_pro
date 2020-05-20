@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mycv',
         'USER':'postgres',
-        'PASSWORD':'vbnet2008ex',
+        'PASSWORD':'1234',
         'HOST':'localhost',
         'Port':'5432',
     }
@@ -130,4 +130,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
 
